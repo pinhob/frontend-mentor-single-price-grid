@@ -4,7 +4,7 @@
   --primary-yellow: hsl(71, 73%, 54%);
   --secondary-gray: hsl(204, 43%, 93%);
   --secondary-grayish-blue: hsl(218, 22%, 67%);
-  
+  --secondary-cian: hsl(178, 47%, 52%);
   font-family: 'Karla', sans-serif;
 }
 
@@ -15,8 +15,49 @@ body {
   background-color: var(--background-color);
 }
 
-main {
-  flex: 0 1 635px;
+main.card {
+  color: white;
   background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 25px 50px hsla(0, 0%, 0%, 0.075);
+  flex: 0 1 635px;
+  overflow: hidden;
+  display: grid;
+  /* TODO: add grid styles */
+}
+
+section {
   padding: 40px;
+}
+
+section.card__price {
+  background-color: var(--primary-cian);
+}
+
+section.card__about {
+  background-color: var(--secondary-cian);
+}
+
+h1.card__cta__title {
+  color: var(--primary-cian);
+}
+
+p.card__cta__subtitle {
+  color: var(--primary-yellow);
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 11px;
+}
+
+p.card__cta__text {
+  color: var(--secondary-grayish-blue);
+}
+
+h2 {
+  font-size: calc(18 /16 * 1rem);
+  margin-bottom: 18px;
+}
+
+.card__about__list {
+  list-style: none;
 }
