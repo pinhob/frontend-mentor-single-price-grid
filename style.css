@@ -1,0 +1,22 @@
+:root {
+  --background-color: hsl(205, 44%, 93%);
+  --primary-cian:  hsl(179, 62%, 43%);
+  --primary-yellow: hsl(71, 73%, 54%);
+  --secondary-gray: hsl(204, 43%, 93%);
+  --secondary-grayish-blue: hsl(218, 22%, 67%);
+  
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+
+main {
+  flex: 0 1 635px;
+  background-color: white;
+  padding: 40px;
+}
