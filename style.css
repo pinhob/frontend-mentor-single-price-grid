@@ -2,6 +2,7 @@
   --background-color: hsl(205, 44%, 93%);
   --primary-cian:  hsl(179, 62%, 43%);
   --primary-yellow: hsl(71, 73%, 54%);
+  --secondary-yellow: hsl(71, 73%, 47%);
   --secondary-gray: hsl(204, 43%, 93%);
   --secondary-grayish-blue: hsl(218, 22%, 67%);
   --secondary-cian: hsl(178, 47%, 52%);
@@ -64,6 +65,21 @@ p.card__cta__text {
 h2 {
   font-size: calc(18 /16 * 1rem);
   margin-bottom: 18px;
+}
+
+a.card__price__button {
+  background: var(--primary-yellow);
+  cursor: pointer;
+  padding: 14px 0;
+  margin-top: 26px;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+
+a.card__price__button:hover {
+  background: var(--secondary-yellow);
 }
 
 .card__about__list {
