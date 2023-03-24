@@ -3,6 +3,8 @@
   --primary-cian:  hsl(179, 62%, 43%);
   --primary-yellow: hsl(71, 73%, 54%);
   --secondary-yellow: hsl(71, 73%, 47%);
+  --secondary-white-alpha-500: hsl(0, 0%, 100%, 0.5);
+  --secondary-white-alpha-750: hsl(0, 0%, 100%, 0.75);
   --secondary-gray: hsl(204, 43%, 93%);
   --secondary-grayish-blue: hsl(218, 22%, 67%);
   --secondary-cian: hsl(178, 47%, 52%);
@@ -10,12 +12,24 @@
 }
 
 body {
+  background-color: var(--background-color);
+}
+
+h2 {
+  font-size: calc(18 /16 * 1rem);
+  margin-bottom: 18px;
+}
+
+section {
+  padding: 40px;
+}
+
+div.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
-  padding-left: 32px;
-  padding-right: 32px;
+  min-height: 100vh;
+  height: 100%;
 }
 
 main.card {
@@ -23,14 +37,11 @@ main.card {
   background-color: white;
   border-radius: 16px;
   box-shadow: 0px 25px 50px hsla(0, 0%, 0%, 0.075);
-  flex: 0 1 635px;
-  overflow: hidden;
+  width: 83%;
+  max-width: 635px;
+  overflow: auto; 
   display: flex;
   flex-wrap: wrap;
-}
-
-section {
-  padding: 40px;
 }
 
 section.card__cta {
@@ -39,12 +50,12 @@ section.card__cta {
 
 section.card__price {
   background-color: var(--primary-cian);
-  flex: 1 1 115px;
+  flex: 1;
 }
 
 section.card__about {
   background-color: var(--secondary-cian);
-  flex: 1 1 115px;
+  flex: 1;
 }
 
 h1.card__cta__title {
@@ -62,13 +73,23 @@ p.card__cta__text {
   color: var(--secondary-grayish-blue);
 }
 
-h2 {
-  font-size: calc(18 /16 * 1rem);
-  margin-bottom: 18px;
+p.card__price__value {
+  font-weight: 400;
+  color: var(--secondary-white-alpha-500);
+  display: flex;
+  align-items: center;
+  gap: calc(11 / 16 * 1rem);;
+}
+
+span.card__price__pricetag {
+  font-size: calc(32 / 16 * 1rem);
+  font-weight: 700;
+  color: white;
 }
 
 a.card__price__button {
   background: var(--primary-yellow);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
   cursor: pointer;
   padding: 14px 0;
   margin-top: 26px;
@@ -84,4 +105,21 @@ a.card__price__button:hover {
 
 .card__about__list {
   list-style: none;
+  font-size: calc(14 / 16 * 1rem);
+  color: var(--secondary-white-alpha-750);
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 24px;
+  }
+
+  section.card__cta {
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
+
+  section.card__price, section.card__about {
+    flex-basis: 100%;
+  }
 }
